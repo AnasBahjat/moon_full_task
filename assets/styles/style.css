@@ -283,7 +283,7 @@ body {
   margin-top: 40px;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
+  align-items: stretch;
 }
 
 .best-sellers h2 {
@@ -294,6 +294,9 @@ body {
 
 .best-sellers .item-content {
   margin-top: 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .best-sellers h3 {
@@ -315,6 +318,8 @@ body {
   margin-top: 24px;
   margin-bottom: 34px;
   font-family: "Inter", sans-serif;
+  flex: 1;
+  min-height: 44px;
 }
 
 .best-sellers .add-to-cart-button {
@@ -326,6 +331,7 @@ body {
   font-weight: 600;
   width: 100%;
   text-transform: uppercase;
+  margin-top: auto;
 }
 
 @media screen and (min-width: 0) and (max-width: 430px) {
@@ -345,21 +351,25 @@ body {
   }
 }
 
-.history-section {
+.history-section,
+.tableware-section {
   text-align: center;
 }
 
-.history-section-container {
+.history-section-container,
+.tableware-container {
   padding: 0 var(--general-padding-left-right);
 }
 
-.history-row {
+.history-row,
+.tableware-row {
   display: flex;
   align-items: stretch;
   flex-wrap: wrap;
 }
 
-.history-row .row-item {
+.history-row .row-item,
+.tableware-row .row-item {
   width: 50%;
 }
 
@@ -381,48 +391,62 @@ body {
 }
 
 .history-row .content-1,
-.history-row .content-2 {
+.history-row .content-2,
+.tableware-row .content-1,
+.tableware-row .content-2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.history-row .content-1 {
+.history-row .content-1,
+.tableware-row .content-1 {
   padding: 64px 60px;
   background-color: #f7f6f5;
 }
 
-.history-row .content-2 {
+.history-row .content-2,
+.tableware-row .content-2 {
   padding: 92px 60px;
+  background-color: #f7f6f5;
 }
 
-.history-row a {
+.history-row a,
+.tableware-row a {
   margin-top: 32px;
   margin-bottom: 64px;
-  color: black;
+  color: #595667;
   font-weight: 700;
   line-height: 20px;
   text-transform: uppercase;
   text-decoration: underline;
 }
 
-.history-row .history-image {
+.history-row .history-image,
+.tableware-row .tableware-image {
   display: flex;
 }
 
-.history-row .history-image img {
+.history-row .history-image img,
+.tableware-row .tableware-image img {
   width: 100%;
   height: 100%;
   display: block;
   object-fit: cover;
 }
 
+.tableware-container {
+  margin-top: 48px;
+}
+
 @media screen and (min-width: 0) and (max-width: 430px) {
-  .history-section-container {
+  .history-section-container,
+  .tableware-container {
     padding: 0;
   }
-  .history-row {
+  .history-row,
+  .tableware-row {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -440,7 +464,8 @@ body {
     order: 3;
   }
 
-  .history-row .row-item {
+  .history-row .row-item,
+  .tableware-row .row-item {
     width: 100%;
   }
   .history-section h2 {
@@ -453,7 +478,74 @@ body {
   }
 }
 
-.best-sellers {
-  text-align: center;
+.tableware-text {
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 6%;
+  text-transform: uppercase;
+  color: #807f86;
+}
+
+.tableware-text-2 {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 32px;
+  letter-spacing: 4%;
+  margin-top: 24px;
+  color: #3a3845;
+}
+
+.tableware-section .description {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 24px;
+  color: #595667;
+  width: 80%;
+}
+
+.signup-section {
   padding: 80px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+}
+
+.signup-section h3 {
+  color: #595667;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  font-family: "Garamond", sans-serif;
+}
+
+.signup-section h2 {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 32px;
+  letter-spacing: 4%;
+  margin-top: 24px;
+}
+
+.signup-section input {
+  border: none;
+  outline: none;
+  margin-top: 32px;
+  border-bottom: 1px solid black;
+  width: 389px;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  padding: 14px 0;
+}
+
+.signup-section button {
+  margin-top: 32px;
+  text-transform: uppercase;
+  padding: 15px 24px;
+  background-color: transparent;
 }
