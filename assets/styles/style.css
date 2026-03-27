@@ -353,55 +353,58 @@ body {
   padding: 0 var(--general-padding-left-right);
 }
 
-.history-section h2 {
-  font-weight: 700;
-  font-style: bold;
-  font-size: 28px;
-  line-height: 32px;
-  letter-spacing: 4%;
-  margin-bottom: 24px;
-  margin-top: 64px;
-  width: 60%;
-  color: #3a3845;
-}
-
-.history-section .description {
-  font-family: "Inter", sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 200;
-  margin: 24px 0 32px 0;
-  width: 90%;
-}
-
 .history-row {
   display: flex;
   align-items: stretch;
+  flex-wrap: wrap;
 }
 
 .history-row .row-item {
   width: 50%;
 }
 
-.history-row .content {
+.history-section h2 {
+  width: 60%;
+  margin: 64px 0 24px;
+  color: #3a3845;
+  font-size: 28px;
+  line-height: 32px;
+  font-weight: 700;
+}
+
+.history-section .description {
+  width: 90%;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 200;
+}
+
+.history-row .content-1,
+.history-row .content-2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 64px;
+}
+
+.history-row .content-1 {
+  padding: 64px 60px;
   background-color: #f7f6f5;
 }
 
+.history-row .content-2 {
+  padding: 92px 60px;
+}
+
 .history-row a {
-  text-transform: uppercase;
-  text-shadow: 14px;
-  line-height: 20px;
-  letter-spacing: 6%;
-  font-weight: 700;
-  text-decoration: underline;
   margin-top: 32px;
   margin-bottom: 64px;
   color: black;
+  font-weight: 700;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-decoration: underline;
 }
 
 .history-row .history-image {
@@ -410,5 +413,47 @@ body {
 
 .history-row .history-image img {
   width: 100%;
-  object-fit: fill;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+@media screen and (min-width: 0) and (max-width: 430px) {
+  .history-section-container {
+    padding: 0;
+  }
+  .history-row {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .responsive-item-1 {
+    order: 1;
+  }
+  .responsive-item-2 {
+    order: 2;
+  }
+  .responsive-item-3 {
+    order: 4;
+  }
+  .responsive-item-4 {
+    order: 3;
+  }
+
+  .history-row .row-item {
+    width: 100%;
+  }
+  .history-section h2 {
+    width: 90%;
+    margin: 64px 0 24px;
+    color: #3a3845;
+    font-size: 28px;
+    line-height: 32px;
+    font-weight: 700;
+  }
+}
+
+.best-sellers {
+  text-align: center;
+  padding: 80px 0;
 }
