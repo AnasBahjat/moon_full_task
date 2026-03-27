@@ -451,16 +451,16 @@ body {
     flex-direction: column;
     flex-wrap: wrap;
   }
-  .responsive-item-1 {
+  .history-row .responsive-item-1 {
     order: 1;
   }
-  .responsive-item-2 {
+  .history-row .responsive-item-2 {
     order: 2;
   }
-  .responsive-item-3 {
+  .history-row .responsive-item-3 {
     order: 4;
   }
-  .responsive-item-4 {
+  .history-row .responsive-item-4 {
     order: 3;
   }
 
@@ -529,6 +529,7 @@ body {
   line-height: 32px;
   letter-spacing: 4%;
   margin-top: 24px;
+  color: #3a3845;
 }
 
 .signup-section input {
@@ -548,4 +549,10 @@ body {
   text-transform: uppercase;
   padding: 15px 24px;
   background-color: transparent;
+}
+
+@media screen and (min-width: 0) and (max-width: 430px) {
+  .signup-section h2 {
+    width: 80%;
+  }
 }
